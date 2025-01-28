@@ -16,7 +16,8 @@ public class Materia {
 
     private String nombre;
 
-    @ManyToOne
+    @SuppressWarnings("rawtypes")
+	@ManyToOne
     @JoinColumn(name = "alumno_id")
     private Alumno alumno;
 
@@ -38,11 +39,13 @@ public class Materia {
         this.nombre = nombre;
     }
 
-    public Alumno getAlumno() {
+    @SuppressWarnings("rawtypes")
+	public Alumno getAlumno() {
         return alumno;
     }
 
-    public void setAlumno(Alumno alumno) {
+    @SuppressWarnings("rawtypes")
+	public void setAlumno(Alumno alumno) {
         this.alumno = alumno;
     }
 }

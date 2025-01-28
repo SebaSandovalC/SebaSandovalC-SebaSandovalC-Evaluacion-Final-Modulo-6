@@ -3,6 +3,7 @@ package com.edutecno.models;
 import jakarta.persistence.*;
 import java.util.Set;
 
+@SuppressWarnings("hiding")
 @Entity
 public class Alumno<Materia> {
 
