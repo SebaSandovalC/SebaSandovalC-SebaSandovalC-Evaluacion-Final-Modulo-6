@@ -1,8 +1,9 @@
 package com.edutecno.repositories;
 
-import com.edutecno.models.Alumno; // Verifica que esta importación esté correcta
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.edutecno.model.Alumno;
 
 @SuppressWarnings("rawtypes")
 @Repository

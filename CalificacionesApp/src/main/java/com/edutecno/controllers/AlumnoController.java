@@ -1,10 +1,9 @@
 package com.edutecno.controllers;
 
-import com.edutecno.DTO.AlumnoDTO;
+import com.edutecno.model.Alumno;
 import com.edutecno.services.AlumnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
@@ -15,12 +14,12 @@ public class AlumnoController {
     private AlumnoService alumnoService;
 
     @GetMapping
-    public List<AlumnoDTO> getAllAlumnos() {
+    public List<Alumno> findAll(){
         return alumnoService.findAll();
     }
 
     @PostMapping
-    public AlumnoDTO createAlumno(@RequestBody AlumnoDTO alumnoDTO) {
-        return alumnoService.save(alumnoDTO);
+    public Alumno save(@RequestBody Alumno alumno){
+        return alumnoService.save(alumno);
     }
 }

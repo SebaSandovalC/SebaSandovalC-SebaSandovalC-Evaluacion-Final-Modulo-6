@@ -1,24 +1,20 @@
 package com.edutecno.controllers;
 
-import com.edutecno.DTO.UserDTO;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 
-@RestController
-@RequestMapping("/api/auth")
+@Controller
 public class LoginController {
 
-    @Autowired
-    private AuthService authService;
-
-    @PostMapping("/signin")
-    public String login(@RequestBody UserDTO userDTO) {
-        return authService.signin(userDTO);
+    @GetMapping("/login")
+    public String login(){
+        return "login";  // Mapea a resources/templates/login.html
     }
 
-    @PostMapping("/signup")
-    public String register(@RequestBody UserDTO userDTO) {
-        return authService.signup(userDTO);
+    @GetMapping("/home")
+    public String home(){
+        return "home";   // Mapea a resources/templates/home.html
     }
 }
+
 

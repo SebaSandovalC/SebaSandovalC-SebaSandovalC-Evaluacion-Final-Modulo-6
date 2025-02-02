@@ -3,6 +3,7 @@ package com.edutecno.DTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import com.edutecno.model.Alumno;
 
 @Data
 @AllArgsConstructor
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 public class MateriaDTO {
     private Long id;
     private String nombre;
-    private Long alumnoId; // ID del alumno asociado
+    private Alumno alumno;
 }
+
 

@@ -1,7 +1,7 @@
 package com.edutecno.services;
 
 import com.edutecno.DTO.UserDTO;
-import com.edutecno.models.Usuario;
+import com.edutecno.model.Usuario;
 import com.edutecno.repositories.UsuarioRepository;
 import com.edutecno.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;

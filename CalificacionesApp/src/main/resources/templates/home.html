@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Sistema de Calificaciones</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al Sistema de Calificaciones</h1>
+        <nav>
+            <ul>
+                <li><a th:href="@{/api/alumnos}">Lista de Alumnos</a></li>
+                <li><a th:href="@{/api/materias}">Materias</a></li>
+                <li><a th:href="@{/logout}">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Panel de Control</h2>
+        <p>Bienvenido, <span th:text="${username}"></span>. Puedes administrar alumnos y materias desde aquí.</p>
+    </section>
+</body>
+</html>

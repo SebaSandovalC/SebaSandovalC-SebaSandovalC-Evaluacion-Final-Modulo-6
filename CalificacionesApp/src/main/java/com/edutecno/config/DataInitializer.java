@@ -4,10 +4,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.edutecno.models.Alumno;
-import com.edutecno.models.Materia;
+import com.edutecno.model.Alumno;
+import com.edutecno.model.Materia;
 import com.edutecno.repositories.AlumnoRepository;
 import com.edutecno.repositories.MateriaRepository;
+
+
 
 @Configuration
 public class DataInitializer {

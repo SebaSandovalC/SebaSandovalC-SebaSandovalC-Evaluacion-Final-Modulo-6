@@ -1,10 +1,12 @@
 package com.edutecno.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 @Component
-public class EmailUtil {
+public class EmailUtil<JavaMailSender> {
 
     @Autowired
     private JavaMailSender mailSender;
@@ -14,7 +16,9 @@ public class EmailUtil {
         message.setTo(to);
         message.setSubject(subject);
         message.setText(body);
+        // Enviar el mensaje usando mailSender
         mailSender.send(message);
     }
 }
+
 
